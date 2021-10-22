@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Nimap Assignment</string>
+    <string name="record_list">Record List</string>
+    <string name="rupee">₹</string>
+    <string name="hundred_percent">100%</string>
+    <string name="pledge">pledge</string>
+    <string name="goals">goals</string>
+    <string name="funded">funded</string>
+    <string name="zero">0</string>
+    <string name="ends_in">ends in</string>
+    <string name="company_description">Company Description</string>
+    <string name="company_title">Company Title</string>
+    <string name="heart">heart</string>
+    <string name="image">image</string>
+</resources>
