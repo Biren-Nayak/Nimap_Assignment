@@ -60,7 +60,7 @@
             android:id="@+id/card_company"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="20dp"
             android:backgroundTint="@color/white"
             android:outlineAmbientShadowColor="?attr/colorOnSecondary"
             android:outlineSpotShadowColor="?attr/colorOnSecondary"
@@ -108,9 +108,9 @@
 
                 <TextView
                     android:id="@+id/description_textview"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:padding="5dp"
                     android:lines="3"
                     android:text="@string/company_description"
                     android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
