@@ -35,23 +35,49 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/percent_cardview"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/teal"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/hundred_percent"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAppearance="?textAppearanceSubtitle1"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/card_company"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_margin="15dp"
             android:backgroundTint="@color/white"
             android:outlineAmbientShadowColor="?attr/colorOnSecondary"
             android:outlineSpotShadowColor="?attr/colorOnSecondary"
             app:cardCornerRadius="16dp"
             app:layout_constraintBottom_toBottomOf="@+id/image"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/percent_cardview"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image"
             tools:targetApi="p">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/percent_cardview"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:id="@+id/title_textview"
@@ -106,10 +132,10 @@
             android:layout_height="150dp"
             android:background="@color/aqua"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="16dp"
             app:layout_constraintDimensionRatio="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintCircleRadius="16dp"
             app:layout_constraintStart_toStartOf="parent">
 
 
@@ -141,9 +167,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="@string/zero"
-                android:textStyle="bold"
                 android:textAppearance="?textAppearanceSubtitle2"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/funded"
                 app:layout_constraintEnd_toEndOf="@+id/funded"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -159,9 +185,9 @@
                 android:layout_margin="20dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="@string/zero"
-                android:textStyle="bold"
                 android:textAppearance="?textAppearanceSubtitle2"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/goal"
                 app:layout_constraintEnd_toEndOf="@+id/goal"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -176,9 +202,9 @@
                 android:layout_margin="20dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="@string/zero"
-                android:textStyle="bold"
                 android:textAppearance="?textAppearanceSubtitle2"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/remaining"
                 app:layout_constraintEnd_toEndOf="@+id/remaining"
                 app:layout_constraintStart_toStartOf="@+id/remaining"
@@ -223,11 +249,33 @@
                 android:textAppearance="?textAppearanceSubtitle1"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/pledge_button"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/goal" />
 
+            <Button
+                android:id="@+id/pledge_button"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:padding="3dp"
+                android:text="@string/pledge"
+                android:textColor="@color/teal"
+                android:textSize="16sp"
+                android:soundEffectsEnabled="true"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/remaining"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/remaining"
+                app:layout_constraintTop_toTopOf="@+id/remaining_textview"
+                app:layout_constraintVertical_bias="0.5" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
